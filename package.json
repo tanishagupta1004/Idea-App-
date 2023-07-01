@@ -1,0 +1,22 @@
+{
+  "name": "ideaapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanishagupta1004/Idea-App-.git"
+  },
+  "author": "tanishaaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanishagupta1004/Idea-App-/issues"
+  },
+  "homepage": "https://github.com/tanishagupta1004/Idea-App-#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
