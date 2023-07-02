@@ -4,7 +4,7 @@ const mongoose=require("mongoose");
 const dbConfig=require('./configs/db.config');
 const app=express()
 const userModel = require('./models/user.model');
-
+const bcrypt=require('bcrypt');
 /**
  * Logic to connect to MongoDB and create an Admin user
  */
@@ -12,7 +12,7 @@ mongoose.connect(dbConfig.DB_URL);
 const db=mongoose.connection;
 
 db.on("error",()=>{
-    console.log("Eroor while connecting to DB");
+    console.log("Error while connecting to DB");
 });
 db.once("open",()=>{
     console.log("DB is connected");
@@ -38,7 +38,7 @@ async function  init(){
     userId:"admin",
     email:"tanishagupta382@gmail.com",
     userType:"ADMIN",
-    password:"Welcome1"
+    password:bcrypt.hashSync("Welcome1",8)
    });
    console.log(admin);
    
